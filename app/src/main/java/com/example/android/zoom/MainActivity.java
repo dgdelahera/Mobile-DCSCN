@@ -201,7 +201,10 @@ public class MainActivity extends AppCompatActivity {
         Bitmap bitmap_result = Bitmap.createBitmap(1000, 1000, Bitmap.Config.ARGB_8888);
         bitmap_result.setPixels(results, 0, 1000, 0, 0, 1000, 1000);
         Bitmap scaled_image = overlay(bitmap_result, resized);
-        saveImage(scaled_image);
+
+
+        saveImage(scaled_image, "result");
+        Toast.makeText(MainActivity.this, "¡Imagen escalada!", Toast.LENGTH_SHORT).show();
 
     }
 
@@ -213,17 +216,17 @@ public class MainActivity extends AppCompatActivity {
         return bmOverlay;
     }
 
-    private void saveImage(Bitmap finalBitmap) {
+    private void saveImage(Bitmap finalBitmap, String name) {
 
         String root = Environment.getExternalStoragePublicDirectory(
                 Environment.DIRECTORY_PICTURES).toString();
-        File myDir = new File(root + "/saved_images");
+        File myDir = new File(root + "/result_zoom");
         myDir.mkdirs();
         Random generator = new Random();
 
         int n = 10000;
         n = generator.nextInt(n);
-        String fname = "Image-"+ n +".jpg";
+        String fname = "image_"+ name +".jpg";
         File file = new File (myDir, fname);
         if (file.exists ()) file.delete ();
         try {
