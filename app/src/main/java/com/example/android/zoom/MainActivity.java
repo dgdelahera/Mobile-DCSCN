@@ -204,7 +204,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         saveImage(scaled_image, "result");
-        Toast.makeText(MainActivity.this, "¡Imagen escalada!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(MainActivity.this, "¡Imagen escalada en " + tDiferencia+ " ms!", Toast.LENGTH_SHORT).show();
 
     }
 
