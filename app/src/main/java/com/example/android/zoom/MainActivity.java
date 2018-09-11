@@ -202,7 +202,7 @@ public class MainActivity extends AppCompatActivity {
         bitmap_result.setPixels(results, 0, 1000, 0, 0, 1000, 1000);
         Bitmap scaled_image = overlay(bitmap_result, resized);
 
-
+        saveImage(bitmap_result, "residual");
         saveImage(scaled_image, "result");
         Toast.makeText(MainActivity.this, "¡Imagen escalada en " + tDiferencia+ " ms!", Toast.LENGTH_SHORT).show();
 

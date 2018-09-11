@@ -32,5 +32,5 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="15dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Hacer Magia" />
+        android:text="Super Resolucion" />
 </LinearLayout>
